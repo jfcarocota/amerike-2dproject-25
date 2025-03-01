@@ -1,7 +1,4 @@
-﻿namespace DefaultNamespace
+﻿public interface IGameApp
 {
-    public interface IGameApp
-    {
-        void StartApp();
-    }
+    void StartApp();
 }
