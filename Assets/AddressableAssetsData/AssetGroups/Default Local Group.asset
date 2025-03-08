@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee169b7a4d77f8545b385d2a345f3466
+    m_Address: Assets/BundleAssets/CharacterA.inputactions
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 157fc492a4f4d2e4f834af669bd14344, type: 2}
   m_SchemaSet:

@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-namespace Character
+namespace Character.Views
 {
     public interface ICharacterView
     {
         SpriteRenderer SpriteRenderer { get; }
-        Animator Animator { get; }
         Rigidbody2D Rigidbody2D { get; }
         Transform Transform { get; }
         bool FlipSprite { get; set; }
-        
+        Vector2 Direction { get; }
+        void JumpButtonDown();
+        int MoveState { set; }
     }
 }

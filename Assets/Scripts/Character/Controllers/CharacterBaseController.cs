@@ -1,6 +1,8 @@
 ﻿using System.Threading;
 using Character.Models;
+using Character.Views;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Character.Controllers
 {
@@ -21,8 +23,20 @@ namespace Character.Controllers
 
         private async UniTask MovementCycleTask(CancellationToken gameToken)
         {
+            var transform = characterView.Transform;
+            var moveSpeed = 3f;
+            
             while (!gameToken.IsCancellationRequested)
             {
+                var direction = characterView.Direction;
+                var horizontal = direction.x;
+
+                var flipX = characterView.FlipSprite;
+                flipX = horizontal < 0 || !(horizontal > 0) && flipX;
+                characterView.FlipSprite = flipX;
+                characterView.MoveState = Mathf.Abs((int)horizontal);
+                
+                transform.Translate(direction * moveSpeed * Time.deltaTime);
                 await UniTask.NextFrame();
             }
         }
