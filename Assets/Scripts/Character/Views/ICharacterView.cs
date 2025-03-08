@@ -7,5 +7,8 @@ namespace Character
         SpriteRenderer SpriteRenderer { get; }
         Animator Animator { get; }
         Rigidbody2D Rigidbody2D { get; }
+        Transform Transform { get; }
+        bool FlipSprite { get; set; }
+        
     }
 }

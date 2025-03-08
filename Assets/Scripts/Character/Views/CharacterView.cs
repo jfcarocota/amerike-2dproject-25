@@ -16,5 +16,12 @@ namespace Character.Views
         public SpriteRenderer SpriteRenderer => spriteRenderer;
         public Animator Animator => animator;
         public Rigidbody2D Rigidbody2D => rb2D;
+        public Transform Transform => transform;
+       
+       public bool FlipSprite
+        {
+            get => spriteRenderer.flipX;
+            set => spriteRenderer.flipX = value;
+        }
     }
 }

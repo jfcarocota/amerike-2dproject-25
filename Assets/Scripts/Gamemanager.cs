@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Gamemanager : MonoBehaviour
@@ -18,5 +19,10 @@ public class Gamemanager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        gameApp.Dispose();
     }
 }
