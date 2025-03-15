@@ -8,14 +8,30 @@ namespace Character.Controllers
 {
     public class CharacterBaseController : ICharacterBaseController
     {
-        private ICharacterView characterView;
+        private readonly ICharacterView characterView;
         private ICharacterData characterData;
-        private CancellationTokenRegistration cancellationTokenRegistration;
-        
+        private readonly CancellationTokenRegistration cancellationTokenRegistration;
+        private readonly float jumpForce;
+        private readonly float moveSpeed;
+        private readonly Rigidbody2D rb2d;
+        private readonly Transform transform;
+
+        private static readonly Vector2 JumpDirection = Vector2.up;
+        private const ForceMode2D ForceMode = ForceMode2D.Impulse;
+
         public CharacterBaseController(ICharacterView characterView, ICharacterData characterData, CancellationToken gameToken)
         {
             this.characterView = characterView;
             this.characterData = characterData;
+
+            characterView.OnJumpButtonDown += Jump;
+
+            jumpForce = characterData.JumpForce;
+            moveSpeed = characterData.MoveSpeed;
+            
+            rb2d = characterView.Rigidbody2D;
+            transform = characterView.Transform;
+            
             cancellationTokenRegistration = gameToken.Register(Dispose);
             
             MovementCycleTask(gameToken).Forget();
@@ -23,9 +39,6 @@ namespace Character.Controllers
 
         private async UniTask MovementCycleTask(CancellationToken gameToken)
         {
-            var transform = characterView.Transform;
-            var moveSpeed = 3f;
-            
             while (!gameToken.IsCancellationRequested)
             {
                 var direction = characterView.Direction;
@@ -41,8 +54,14 @@ namespace Character.Controllers
             }
         }
 
+        private void Jump()
+        {
+            rb2d.AddForce(JumpDirection * jumpForce, ForceMode);
+        }
+
         public void Dispose()
         {
+            characterView.OnJumpButtonDown -= Jump;
             cancellationTokenRegistration.Dispose();
         }
     }

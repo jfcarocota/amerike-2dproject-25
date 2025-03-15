@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Gamemanager : MonoBehaviour
@@ -13,7 +12,7 @@ public class Gamemanager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
             gameApp = new GameApp();
-            gameApp.StartApp();
+            gameApp.StartApp().Forget();
         }
         else
         {

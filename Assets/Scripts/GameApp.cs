@@ -1,9 +1,9 @@
 using System.Threading;
-using Character;
 using Character.Controllers;
 using Character.Models;
 using Character.Views;
-using UnityEngine;
+using Cysharp.Threading.Tasks;
+using Utils.AddressableLoader;
 
 public class GameApp : IGameApp
 {
@@ -14,10 +14,10 @@ public class GameApp : IGameApp
         gameToken = new CancellationTokenSource();
     }
     
-    public void StartApp()
+    public async UniTaskVoid StartApp()
     {
-        ICharacterView characterView = GameObject.Find("CharacterBase").GetComponent<CharacterView>();
-        ICharacterData characterData = new CharacterData();
+        var characterView = await AddressableLoader.InstantiateAsync<ICharacterView>("basePlayer");
+        ICharacterData characterData = new CharacterDataDummy();
         
         ICharacterBaseController characterBaseController =
             new CharacterBaseController(characterView, characterData, gameToken.Token);

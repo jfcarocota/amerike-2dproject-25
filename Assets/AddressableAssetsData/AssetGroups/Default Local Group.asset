@@ -28,7 +28,8 @@ MonoBehaviour:
   - m_GUID: 40b3dc61b84c5314ea87e866e98c7bf1
     m_Address: Assets/BundleAssets/Character_A/Base/Character_A.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - basePlayer
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4440235ad3eb81c4c9ee84982902fc9d
     m_Address: Assets/BundleAssets/Character_A/Hallowen25

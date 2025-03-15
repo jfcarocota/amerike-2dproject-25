@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils.Bindings;
 
@@ -25,15 +26,14 @@ namespace Character.Views
         }
 
        public Vector2 Direction => direction;
-       public void JumpButtonDown()
-       {
-           
-       }
+       public void JumpButtonDown() => OnJumpButtonDown?.Invoke();
 
        public int MoveState
        {
            set => moveBinding.Value = value;
        }
+
+       public event Action OnJumpButtonDown;
 
        public void SetDirection(InputAction.CallbackContext ctx)
        {
