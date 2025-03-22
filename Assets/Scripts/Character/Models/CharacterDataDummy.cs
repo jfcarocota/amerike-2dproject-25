@@ -4,5 +4,6 @@
     {
         public float MoveSpeed => 5f;
         public float JumpForce => 3f;
+        public string StyleName => "basePlayer";
     }
 }

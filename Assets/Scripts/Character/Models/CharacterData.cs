@@ -6,6 +6,8 @@ namespace Character.Models
     [Serializable]
     public class CharacterData : ICharacterData
     {
+        [SerializeField] 
+        private string styleName;
         [SerializeField]
         private float moveSpeed;
         [SerializeField]
@@ -13,5 +15,6 @@ namespace Character.Models
 
         public float MoveSpeed => moveSpeed;
         public float JumpForce => jumpForce;
+        public string StyleName => styleName;
     }
 }

@@ -4,5 +4,6 @@
     {
         float MoveSpeed { get; }
         float JumpForce { get; }
+        string StyleName { get; }
     }
 }
