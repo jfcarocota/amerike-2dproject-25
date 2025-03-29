@@ -34,8 +34,9 @@ namespace Utils.DataAPI
 
             if (webRequest.result != UnityWebRequest.Result.Success) return modelData;
             var data = JObject.Parse(webRequest.downloadHandler.text);
-            Debug.Log(data);
-            modelData = JsonUtility.FromJson<T>(GetData(data)[queryName]?.ToString());
+            var dataObject = GetData(data);
+            //Debug.Log(dataObject[queryName]?[0]?.ToString());
+            modelData = JsonUtility.FromJson<T>(dataObject[queryName]?[0]?.ToString());
 
             return modelData;
         }

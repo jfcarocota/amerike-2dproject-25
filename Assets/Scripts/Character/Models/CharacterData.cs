@@ -13,8 +13,17 @@ namespace Character.Models
         [SerializeField]
         private float jumpForce;
 
+        public CharacterData(string styleName, float moveSpeed, float jumpForce)
+        {
+            this.styleName = styleName;
+            this.moveSpeed = moveSpeed;
+            this.jumpForce = jumpForce;
+        }
+
         public float MoveSpeed => moveSpeed;
         public float JumpForce => jumpForce;
         public string StyleName => styleName;
+        
+        
     }
 }
