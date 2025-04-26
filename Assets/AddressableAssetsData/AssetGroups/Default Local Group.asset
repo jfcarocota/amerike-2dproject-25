@@ -20,6 +20,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 115b39149cc56644abb0a9030e4cdcc3
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/CharacterHwn25.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - hwn25Player
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c92b9b91c1525949a6bacf5b5ce24c2
     m_Address: Assets/BundleAssets/Character_A/DiaMuertos
     m_ReadOnly: 0
@@ -36,8 +42,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 468fb7cd733c2b0499d71c07a662d3cc
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/Animations
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56f111197f15f2848bff958855b72db0
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/sfx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a18540c9cd72ce748aa9c780e1fe4744
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/Animations/Character_A_HWN25.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5b1b8940e8917949b1e32907704c6bd
     m_Address: Assets/BundleAssets/Character_A
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa293b4b90876fe4a9b856f1fbdada70
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/Animations/run.anim
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -48,6 +74,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cbd7a64d3acd0d54d8b58accb803dd43
     m_Address: Assets/BundleAssets/Character_A/Base/Animations
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ded756b9d8e60b046a23b5620b6d6968
+    m_Address: Assets/BundleAssets/Character_A/Hallowen25/Animations/idle.anim
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
