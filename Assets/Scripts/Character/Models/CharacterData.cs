@@ -7,13 +7,13 @@ namespace Character.Models
     public class CharacterData : ICharacterData
     {
         [SerializeField] 
-        private string styleName;
+        private StyleNameData styleName;
         [SerializeField]
         private float moveSpeed;
         [SerializeField]
         private float jumpForce;
 
-        public CharacterData(string styleName, float moveSpeed, float jumpForce)
+        public CharacterData(StyleNameData styleName, float moveSpeed, float jumpForce)
         {
             this.styleName = styleName;
             this.moveSpeed = moveSpeed;
@@ -22,7 +22,7 @@ namespace Character.Models
 
         public float MoveSpeed => moveSpeed;
         public float JumpForce => jumpForce;
-        public string StyleName => styleName;
+        public StyleNameData StyleName => styleName;
         
         
     }

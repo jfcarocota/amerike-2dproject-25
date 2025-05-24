@@ -25,13 +25,33 @@ public class GameApp : IGameApp
         var characterView = await AddressableLoader.InstantiateAsync<ICharacterView>("basePlayer");
         //ICharacterData characterData = new CharacterDataDummy();
 
-        var getCharacterDataQueryByStyleName = @"query CharacterDataByStyleName($styleName: String!) {
-          CharacterDataByStyleName(styleName: $styleName) {
-            styleName
+        const string getCharacterDataQueryByStyleName = @"query CharacterDataByStyleName($styleNameId: String!) {
+          CharacterDataByStyleName(styleNameId: $styleNameId) {
+            id
             moveSpeed
             jumpForce
+            styleName {
+              id
+              styleName
+              priority
+            }
           }
         }";
+
+        const string getCharacterDataWitHighestStylePriority = @"query CharacterDataWitHighestStylePriority {
+          CharacterDataWitHighestStylePriority {
+            id
+            moveSpeed
+            jumpForce
+            styleName {
+              id
+              styleName
+              priority
+            }
+          }
+        }";
+        
+        
 
         var characterDataByStyleNameVariables = new CharacterDataByStyleName()
         {
@@ -40,12 +60,12 @@ public class GameApp : IGameApp
 
         var fullQueryCharacterData = new GraphQlQuery()
         {
-            query = getCharacterDataQueryByStyleName,
-            variables = characterDataByStyleNameVariables
+            query = getCharacterDataWitHighestStylePriority,
+            variables = null
         };
 
         var characterData = await GraphqlUtils.GetModel<CharacterData>(fullQueryCharacterData, 
-            "CharacterDataByStyleName", 
+            "CharacterDataWitHighestStylePriority", 
             gameToken.Token);
         
         ICharacterBaseController characterBaseController =
