@@ -22,7 +22,7 @@ public class GameApp : IGameApp
     
     public async UniTaskVoid StartApp()
     {
-        var characterView = await AddressableLoader.InstantiateAsync<ICharacterView>("basePlayer");
+        //var characterView = await AddressableLoader.InstantiateAsync<ICharacterView>("basePlayer");
         //ICharacterData characterData = new CharacterDataDummy();
 
         const string getCharacterDataQueryByStyleName = @"query CharacterDataByStyleName($styleNameId: String!) {
@@ -53,10 +53,10 @@ public class GameApp : IGameApp
         
         
 
-        var characterDataByStyleNameVariables = new CharacterDataByStyleName()
+        /*var characterDataByStyleNameVariables = new CharacterDataByStyleName()
         {
             styleName = "basePlayer"
-        };
+        };*/
 
         var fullQueryCharacterData = new GraphQlQuery()
         {
@@ -67,7 +67,9 @@ public class GameApp : IGameApp
         var characterData = await GraphqlUtils.GetModel<CharacterData>(fullQueryCharacterData, 
             "CharacterDataWitHighestStylePriority", 
             gameToken.Token);
-        
+        var characterStyle = characterData.StyleName.StyleName;
+        var characterView = await AddressableLoader.InstantiateAsync<ICharacterView>(characterStyle);
+
         ICharacterBaseController characterBaseController =
             new CharacterBaseController(characterView, characterData, gameToken.Token);
     }
