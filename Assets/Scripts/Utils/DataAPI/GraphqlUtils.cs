@@ -29,14 +29,27 @@ namespace Utils.DataAPI
             var payload = Encoding.UTF8.GetBytes(json);
             webRequest.uploadHandler = new UploadHandlerRaw(payload);
             webRequest.downloadHandler = new DownloadHandlerBuffer();
-            webRequest.SetRequestHeader(requestName,requestType);
+            webRequest.SetRequestHeader(requestName, requestType);
+
             await webRequest.SendWebRequest().WithCancellation(token);
 
-            if (webRequest.result != UnityWebRequest.Result.Success) return modelData;
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"GraphQL Error: {webRequest.error}");
+                return modelData;
+            }
+
             var data = JObject.Parse(webRequest.downloadHandler.text);
             var dataObject = GetData(data);
-            Debug.Log(dataObject[queryName]?.ToString());
-            modelData = JsonUtility.FromJson<T>(dataObject[queryName]?[0]?.ToString());
+
+            if (dataObject?[queryName] != null)
+            {
+                modelData = dataObject[queryName].ToObject<T>();
+            }
+            else
+            {
+                Debug.LogWarning($"Query result '{queryName}' was not found in the response.");
+            }
 
             return modelData;
         }

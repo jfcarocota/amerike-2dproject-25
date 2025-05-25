@@ -510,6 +510,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3584,7 +3597,146 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CollectablesSheet_0: -4830279906679533363
+      CollectablesSheet_1: 2433303377600934635
+      CollectablesSheet_10: -6791392352570350407
+      CollectablesSheet_100: -9085176381708163569
+      CollectablesSheet_101: -4646215508577934376
+      CollectablesSheet_102: -8692203295681335931
+      CollectablesSheet_103: 8353608582419278317
+      CollectablesSheet_104: 1260157317569611315
+      CollectablesSheet_105: 259157205314392954
+      CollectablesSheet_106: 6437269300848931445
+      CollectablesSheet_107: 7627219724249384937
+      CollectablesSheet_108: -6101179782081160765
+      CollectablesSheet_109: -9178870468058908019
+      CollectablesSheet_11: -9139797922183654097
+      CollectablesSheet_110: -4180097114437772606
+      CollectablesSheet_111: 6160621732575006376
+      CollectablesSheet_112: -5442155043879665027
+      CollectablesSheet_113: 2390144412422801037
+      CollectablesSheet_114: 8746768123941247072
+      CollectablesSheet_115: -4295061045012748980
+      CollectablesSheet_116: 8345566013234678488
+      CollectablesSheet_117: -1329639618290642115
+      CollectablesSheet_118: 6029560479934838450
+      CollectablesSheet_119: 5478551676083690953
+      CollectablesSheet_12: 791614028387255201
+      CollectablesSheet_120: 1709059341328359143
+      CollectablesSheet_121: -2496619965198959987
+      CollectablesSheet_122: 4569130441563201321
+      CollectablesSheet_123: -2981986393646783127
+      CollectablesSheet_124: -6501512367087446410
+      CollectablesSheet_125: 2431505202891786461
+      CollectablesSheet_126: -8259195704152271630
+      CollectablesSheet_127: -4954205997626859909
+      CollectablesSheet_128: -7384018311082422887
+      CollectablesSheet_129: 5294204068436760587
+      CollectablesSheet_13: -890274962578558648
+      CollectablesSheet_130: 5215706566618715907
+      CollectablesSheet_131: -5805660496546721101
+      CollectablesSheet_132: 6413449133890810245
+      CollectablesSheet_133: -7307603509222785057
+      CollectablesSheet_134: 3589046981873456247
+      CollectablesSheet_135: -1681516457544931682
+      CollectablesSheet_136: -4959077786321428848
+      CollectablesSheet_137: -1526083709259905956
+      CollectablesSheet_138: 3795064603803776379
+      CollectablesSheet_14: 3740496659620531133
+      CollectablesSheet_15: -1123080461797852689
+      CollectablesSheet_16: -4682661164284627298
+      CollectablesSheet_17: 5740345316204041012
+      CollectablesSheet_18: 4226374644223451738
+      CollectablesSheet_19: 8224754320977666995
+      CollectablesSheet_2: 4326360672093489574
+      CollectablesSheet_20: 7006365129216033665
+      CollectablesSheet_21: 5187339739730092165
+      CollectablesSheet_22: -7702195830737977034
+      CollectablesSheet_23: 5945855196275278073
+      CollectablesSheet_24: -5638073453118206254
+      CollectablesSheet_25: 3018789328221233746
+      CollectablesSheet_26: 6207848706489671585
+      CollectablesSheet_27: 7657470127049198849
+      CollectablesSheet_28: -1578674812908210058
+      CollectablesSheet_29: 461049401148965631
+      CollectablesSheet_3: -4855177952980074946
+      CollectablesSheet_30: 6509512202964385432
+      CollectablesSheet_31: 4390899748041855981
+      CollectablesSheet_32: 7573758778564899895
+      CollectablesSheet_33: -7910099408587146491
+      CollectablesSheet_34: 3657569176677187154
+      CollectablesSheet_35: 3582290777441499936
+      CollectablesSheet_36: -2925075935899441220
+      CollectablesSheet_37: -5986466410747580545
+      CollectablesSheet_38: -8916164921304900586
+      CollectablesSheet_39: 1346977951493773518
+      CollectablesSheet_4: 7379488998416444209
+      CollectablesSheet_40: -8610301584030039750
+      CollectablesSheet_41: 8686503638686576710
+      CollectablesSheet_42: 5921940714721765937
+      CollectablesSheet_43: -5677354186263687764
+      CollectablesSheet_44: -5962943361029903534
+      CollectablesSheet_45: -5870563546510094781
+      CollectablesSheet_46: -7321488757325642643
+      CollectablesSheet_47: 6823139905633571575
+      CollectablesSheet_48: -700793333652602243
+      CollectablesSheet_49: 5309257918006468624
+      CollectablesSheet_5: -1607827994247371881
+      CollectablesSheet_50: 5259199415057573313
+      CollectablesSheet_51: 7552496039384965196
+      CollectablesSheet_52: -1327969492810800011
+      CollectablesSheet_53: -253200254337282511
+      CollectablesSheet_54: 7742448086048995565
+      CollectablesSheet_55: -3498035415333613842
+      CollectablesSheet_56: 5004709217616842605
+      CollectablesSheet_57: 3548934445954258875
+      CollectablesSheet_58: 9037536764132921972
+      CollectablesSheet_59: -4788195115833039476
+      CollectablesSheet_6: 8216928261766361407
+      CollectablesSheet_60: -6473558718262601468
+      CollectablesSheet_61: 1959211553432938998
+      CollectablesSheet_62: 6510180133935011546
+      CollectablesSheet_63: -7646343455025113088
+      CollectablesSheet_64: -2228180874394107018
+      CollectablesSheet_65: 4443293375877917448
+      CollectablesSheet_66: -4846235517805110826
+      CollectablesSheet_67: 3647169718582280509
+      CollectablesSheet_68: 5494598042398782333
+      CollectablesSheet_69: -728094311553606984
+      CollectablesSheet_7: -1835176866368092265
+      CollectablesSheet_70: -4701980435882720230
+      CollectablesSheet_71: -5285206973841168118
+      CollectablesSheet_72: -1067019598325790882
+      CollectablesSheet_73: 1896843854006977088
+      CollectablesSheet_74: -1306651524741512705
+      CollectablesSheet_75: 7972601997861369110
+      CollectablesSheet_76: -3900275525949211259
+      CollectablesSheet_77: 6820589792628012696
+      CollectablesSheet_78: -5933305743837137378
+      CollectablesSheet_79: -3473833681758753701
+      CollectablesSheet_8: 5692010662984648332
+      CollectablesSheet_80: 7939051473396254447
+      CollectablesSheet_81: -6402016335045310092
+      CollectablesSheet_82: 100710923639187824
+      CollectablesSheet_83: 5764163135035033889
+      CollectablesSheet_84: -3948528248945967021
+      CollectablesSheet_85: -3701182786925927293
+      CollectablesSheet_86: -221682243470610211
+      CollectablesSheet_87: -6238060279465898101
+      CollectablesSheet_88: 2868043243658340994
+      CollectablesSheet_89: 7380036116187693334
+      CollectablesSheet_9: -8352156007090137614
+      CollectablesSheet_90: 8309040219455681638
+      CollectablesSheet_91: -1674029749039957222
+      CollectablesSheet_92: 3019595347392873407
+      CollectablesSheet_93: -3441158946510111340
+      CollectablesSheet_94: -4018522825037351978
+      CollectablesSheet_95: -3697667105926653231
+      CollectablesSheet_96: 3598228187006209339
+      CollectablesSheet_97: -1227337110767072530
+      CollectablesSheet_98: 2951788675429113693
+      CollectablesSheet_99: -3092916447664362982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
